@@ -102,6 +102,6 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
   
   listen_for /Theo/i do
-    say "Theo? Ist das nicht der nette Herr von der Spire Community?"
+    say "Theo? Ist das nicht der nette Serveradministrator der sich um alles Kuemmert?"
   end
 end
