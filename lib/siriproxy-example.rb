@@ -67,7 +67,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   
   #demonstrate asking a question
   listen_for /Server/i do
-    response = ask "Kannst du mich hören?" #ask the user for something
+    response = ask "Kannst du mich hoeren?" #ask the user for something
     
     if(response =~ /Ja/i) #process their response
       say "Sehr Gut!" 
