@@ -29,7 +29,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end 
     
   #Essential for server status
-  listen_for /how many keys/i do
+  listen_for /Wie viele Keys/i do
     @keysavailable=$keyDao.listkeys().count
     if @keysavailable==1
       say "There is one key available on the server" #say something to the user!    
@@ -43,7 +43,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     end
   end
   
-  listen_for /how many active connections/i do
+  listen_for /Wie viele Aktive Connections/i do
     $conf.active_connections = EM.connection_count 
     @activeconnections=$conf.active_connections
     if @activeconnections>0
