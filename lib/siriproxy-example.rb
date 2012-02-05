@@ -29,12 +29,12 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end 
     
   #Essential for server status
-  listen_for /Proxy Info/i do
+  listen_for /Proxy Status/i do
     @keysavailable=$keyDao.listkeys().count
     $conf.active_connections = EM.connection_count 
     @activeconnections=$conf.active_connections
 	if @keysavailable==1 and @activeconnections>0
-      say " Siri Proxy ist Online! Es ist 1 Key verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
+      say " Siri Proxy ist Online! Es ist ein Key verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     elsif @keysavailable>0 and @activeconnections>0   
       say " Siri Proxy ist Online! Es sind #{@keysavailable} Keys verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
@@ -66,13 +66,13 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
   
   #demonstrate asking a question
-  listen_for /siri proxy test question/i do
-    response = ask "Is this thing working?" #ask the user for something
+  listen_for /Server/i do
+    response = ask "Kannst du mich hören?" #ask the user for something
     
-    if(response =~ /yes/i) #process their response
-      say "Great!" 
+    if(response =~ /Ja/i) #process their response
+      say "Sehr Gut!" 
     else
-      say "You could have just said 'yes'!"
+      say "Du hast mit Ja geantwortet! Wunderbar "
     end
     
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
