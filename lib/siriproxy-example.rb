@@ -29,35 +29,35 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end 
     
   #Essential for server status
-  listen_for /how many keys/i do
+  listen_for /Wie viele Keys sind verfügbar/i do
     @keysavailable=$keyDao.listkeys().count
     if @keysavailable==1
-      say "There is one key available on the server" #say something to the user!    
+      say "Es ist 1 Key verfügbar" #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     elsif @keysavailable>0    
-      say "There are #{@keysavailable} keys available" #say something to the user!    
+      say "Es sind #{@keysavailable} Keys verfügbar" #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     else
-      say "All keys are overloaded!" #say something to the user!    
+      say "Alle Keys sind Overloaded!" #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     end
   end
   
-  listen_for /how many active connections/i do
+  listen_for /Verbindungen/i do
     $conf.active_connections = EM.connection_count 
     @activeconnections=$conf.active_connections
     if @activeconnections>0
-      say "There are #{@activeconnections} active connections" #say something to the user!    
+      say "Es sind #{@activeconnections} Aktive Verbindungen" #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     else
-      say "Something went wrong!" #say something to the user!    
+      say "Irgendetwas ist schief geloffen" #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     end
   end
   #end of server status monitor  
   
-  listen_for /test siri proxy/i do
-    say "Siri Proxy is up and running!" #say something to the user!
+  listen_for /Serverstatus/i do
+    say "Der Server ist Online und wartet auf Anfragen!" #say something to the user!
     
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
