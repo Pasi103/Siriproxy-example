@@ -31,21 +31,18 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   #Essential for server status
   listen_for /Proxy Info/i do
     @keysavailable=$keyDao.listkeys().count
-    if @keysavailable==1
-      say "Es ist ein Key verfuegbar" #say something to the user!    
-      request_completed
-	 elsif @keysavailable>0    
-      say "There are #{@keysavailable} keys available" #say something to the user!    
-      request_completed
-	else
-      say "All keys are overloaded!" #say something to the user!    
-      request_completed
-	$conf.active_connections = EM.connection_count 
+    $conf.active_connections = EM.connection_count 
     @activeconnections=$conf.active_connections
-    if @activeconnections>0
-      say " #{@activeconnections} Aktive Verbindungen" #say something to the user!    
+	if @keysavailable==1 and @activeconnections>0
+      say "Es ist ein Key verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-	end
+    elsif @keysavailable>0 and @activeconnections>0   
+      say "Es sind #{@keysavailable} Keys verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
+      request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+    else
+      say "All keys are overloaded!" #say something to the user!    
+      request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+    end
   end
   
   listen_for /Wie viele Aktive Verbindungen/i do
