@@ -29,13 +29,13 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end 
     
   #Essential for server status
-  listen_for /Wie viele Keys sind verfügbar/i do
+  listen_for /Wie viele Keys sind verfuegbar/i do
     @keysavailable=$keyDao.listkeys().count
     if @keysavailable==1
       say "Es ist 1 Key verfügbar" #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     elsif @keysavailable>0    
-      say "Es sind #{@keysavailable} Keys verfügbar" #say something to the user!    
+      say "Es sind #{@keysavailable} Keys verfuegbar" #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     else
       say "Alle Keys sind Overloaded!" #say something to the user!    
