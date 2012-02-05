@@ -33,11 +33,14 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     @keysavailable=$keyDao.listkeys().count
     if @keysavailable==1
       say "Es ist ein Key verfuegbar" #say something to the user!    
-     elsif @keysavailable>0    
+      request_completed
+	 elsif @keysavailable>0    
       say "There are #{@keysavailable} keys available" #say something to the user!    
-    else
+      request_completed
+	else
       say "All keys are overloaded!" #say something to the user!    
-    $conf.active_connections = EM.connection_count 
+      request_completed
+	$conf.active_connections = EM.connection_count 
     @activeconnections=$conf.active_connections
     if @activeconnections>0
       say " #{@activeconnections} Aktive Verbindungen" #say something to the user!    
