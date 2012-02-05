@@ -100,4 +100,8 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
+  
+  listen_for /Theo/i do
+    say "Theo? Ist das nicht der nette Herr von der Spire Community?"
+  end
 end
