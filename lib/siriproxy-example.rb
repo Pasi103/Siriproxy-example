@@ -34,34 +34,15 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     $conf.active_connections = EM.connection_count 
     @activeconnections=$conf.active_connections
 	if @keysavailable==1 and @activeconnections>0
-      say "Es ist ein Key verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
+      say " Siri Proxy ist Online! Es ist 1 Key verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     elsif @keysavailable>0 and @activeconnections>0   
-      say "Es sind #{@keysavailable} Keys verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
+      say " Siri Proxy ist Online! Es sind #{@keysavailable} Keys verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     else
-      say "All keys are overloaded!" #say something to the user!    
+      say "Siri Proxy ist Online! Aber alle Keys sind Overloaded!" #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     end
-  end
-  
-  listen_for /Wie viele Aktive Verbindungen/i do
-    $conf.active_connections = EM.connection_count 
-    @activeconnections=$conf.active_connections
-    if @activeconnections>0
-      say " #{@activeconnections} Aktive Verbindungen" #say something to the user!    
-      request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-    else
-      say "Something went wrong!" #say something to the user!    
-      request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-    end
-  end
-  #end of server status monitor  
-  
-  listen_for /test siri proxy/i do
-    say "Siri Proxy ist Online! Theo du brauchst dir keine Sorgen machen!" #say something to the user!
-    
-    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
   
   #Demonstrate that you can have Siri say one thing and write another"!
