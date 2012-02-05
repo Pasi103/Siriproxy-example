@@ -34,13 +34,13 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     $conf.active_connections = EM.connection_count 
     @activeconnections=$conf.active_connections
 	if @keysavailable==1 and @activeconnections>0
-      say " Siri Proxy ist Online! Es ist ein Key verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
+      say " Siri Proxy ist Online! Es ist ein Key verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen. Dieser Server wurde von Theo dem Serveradministrator erstellt." #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     elsif @keysavailable>0 and @activeconnections>0   
-      say " Siri Proxy ist Online! Es sind #{@keysavailable} Keys verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen." #say something to the user!    
+      say " Siri Proxy ist Online! Es sind #{@keysavailable} Keys verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen. Dieser Server wurde von Theo dem Serveradministrator erstellt." #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     else
-      say "Siri Proxy ist Online! Aber alle Keys sind Overloaded!" #say something to the user!    
+      say "Siri Proxy ist Online! Aber alle Keys sind Overloaded!  Dieser Server wurde von Theo dem Serveradministrator erstellt." #say something to the user!    
       request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     end
   end
