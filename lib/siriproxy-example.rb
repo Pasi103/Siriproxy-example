@@ -36,17 +36,17 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
 	if @keysavailable==1 and @activeconnections>0
       say "Siri Proxy ist Online!" #say something to the user!    
       say "Es ist ein Key verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen."
-	  say "Dieser Server wurde von Theo dem Serveradministrator erstellt."
+	  say "Dieser Server wurde von Theo  dem Server  Administrator erstellt."
       request_completed  #always complete your request! Otherwise the phone will "spin" at the user!
     elsif @keysavailable>0 and @activeconnections>0   
       say "Siri Proxy ist Online!" #say something to the user!    
       say "Es sind #{@keysavailable} Keys verfuegbar und es sind  #{@activeconnections} Aktive Verbindungen"
-	  say "Dieser Server wurde von Theo dem Serveradministrator erstellt."
+	  say "Dieser Server wurde von Theo  dem Server  Administrator erstellt."
 	  request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     else
       say "Siri Proxy ist Online!"
       say "Aber alle Keys sind Overloaded!"
-	  say "Dieser Server wurde von Theo dem Serveradministrator erstellt."
+	  say "Dieser Server wurde von Theo  dem Server  Administrator erstellt."
 	  request_completed #always complete your request! Otherwise the phone will "spin" at the user!
     end
   end
@@ -109,6 +109,6 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   
   listen_for /Theo/i do
     say "Theo?"
-    say "Ist das nicht der nette Serveradministrator der sich um alles Kuemmert?"
+    say "Ist das nicht der nette Server  Administrator der sich um alles Kuemmert?"
   end
 end
