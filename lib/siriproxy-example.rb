@@ -111,4 +111,11 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     say "Theo?"
     say "Ist das nicht der nette Server  Administrator der sich um alles Kuemmert?"
   end
+  listen_for /Wer wird Deutscher Meister/i do
+    response = ask "Borussia Dortmund! Wer sonst?" #ask the user for something
+    
+    if(response =~ /Nicht die Blauen/i) #process their response
+      say "Ein lebenlang ohne Schale in der Hand!" 
+  end
 end
+
