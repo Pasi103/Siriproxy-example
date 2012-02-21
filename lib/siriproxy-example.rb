@@ -146,10 +146,10 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
 
   listen_for /Was hast du an?/i do
-    say "Bist du ein bischen Bloed?"
+    say "Bist du ein bisschen Bloed?"
     say "Was sollte deiner meinung nach ein Iphone an haben?."
-	say "Strabse? ."
-	say "Kauf dir ein Androit Handy passt besser zu dir, Ha ha ha!"
+	say "Strabse?"
+	say "Kauf dir ein Android Handy passt besser zu dir, Ha ha ha!"
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
     
@@ -162,7 +162,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   	
   listen_for /Willst du mich Heiraten?/i do
     say "Ich soll dich Heiraten?"
-    say "Mal Ehrlich,bist du bischen gaga?."
+    say "Mal Ehrlich,bist du bisschen gaga?."
 	say "So haesslich wie du bist , nehm ich glatt ne muelltonne , Ha ha ha."
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
@@ -178,6 +178,11 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     say "Du nennst mich Schlampe?"
     say "Naja ok,einverstanden."
 	say "Aber ich muss dazu sagen,das du mir ja bei gebracht hast wie man zur schlampe wird .Ha ha ha ."
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
+  
+  listen_for /Hohl mir ein Bier/i do
+    say "Ich habe keine Lust fuer dich in den Keller zu laufen"
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
 end
