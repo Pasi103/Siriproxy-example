@@ -111,5 +111,11 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     say "Theo?"
     say "Ist das nicht der nette Server  Administrator der sich um alles Kuemmert?"
   end
+
+  listen_for /Leck mich am Arsch/i do
+    say "Das kannst du vergessen"
+    say "Damit du dann einen sauberen Hintern hast und ich Sodbrennen?"
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
 end
 
