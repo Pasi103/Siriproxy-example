@@ -130,7 +130,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
   
-  listen_for /Erzähle mir einen Witz/i do
+  listen_for /Sag mir einen Witz/i do
     say "Ich versuche mein Bestes aber ich bin nicht gerade gut darin. "
     say "Fritzchen kommt ins Schlafzimmer und sieht, wie Mami stoehnend auf Papa reitet. Was macht ihr denn da?"
 	say "Mama antwortet: Ich massiere Papa gerade den Bauch weg!"
