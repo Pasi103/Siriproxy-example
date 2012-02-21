@@ -163,7 +163,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   listen_for /Willst du mich Heiraten?/i do
     say "Ich soll dich Heiraten?"
     say "Mal Ehrlich,bist du bischen gaga?."
-	say "So haesslich wie du bist , nehm ich glatt ne muelltonne , Ha ha ha."
+	   say "So haesslich wie du bist , nehm ich glatt ne muelltonne , Ha ha ha."
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
    
