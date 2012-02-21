@@ -181,7 +181,7 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
   
-  listen_for /Hohl mir ein Bier/i do
+  listen_for /Bring mir ein Bier/i do
     say "Ich habe keine Lust fuer dich in den Keller zu laufen"
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
