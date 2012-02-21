@@ -107,11 +107,13 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
   
-    listen_for /Leck mich am Arsch/i do
+  
+  listen_for /Leck mich am Arsch/i do
     say "Das kannst du vergessen"
     say "Damit du dann einen sauberen Hintern hast und ich Sodbrennen?"
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
+  
   
   listen_for /Bloede Kuh/i do
     say "Aha , gut zu wissen?"
@@ -135,13 +137,14 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
  
-
- listen_for /Ich will Sex von dir/i do
+  
+  listen_for /Ich will Sex von dir/i do
     say "Aha, du willst sex mit mir?"
     say "Also mal Ehrlich , mit deinem 5 milimeter Sportbrunser kommste bei mir nicht an."
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
 
+  
   listen_for /Theo/i do
     say "Theo?"
     say "Ist das nicht der nette Server  Administrator der sich um alles Kuemmert?"
