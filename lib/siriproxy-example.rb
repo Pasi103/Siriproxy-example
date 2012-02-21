@@ -108,43 +108,6 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
   end
   
   
-  listen_for /Leck mich am Arsch/i do
-    say "Das kannst du vergessen"
-    say "Damit du dann einen sauberen Hintern hast und ich Sodbrennen?"
-    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-  end
-  
-  
-  listen_for /Bloede Kuh/i do
-    say "Aha , gut zu wissen?"
-    say "In Zukunft kannst du dir deine Bloeden fragen da hin stecken wo keine Sonne hin scheint?"
-    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-  end
-    
-  
-  listen_for /Ich will Sex von dir/i do
-    say "Aha, du willst sex mit mir?"
-    say "Also mal Ehrlich , mit deinem 5 milimeter Sportbrunser kommste bei mir nicht an."
-    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-  end
-	
-	
-  listen_for /Erzähle mir einen Witz/i do
-    say "Ich versuche mein Bestes aber ich bin nicht gerade gut darin. "
-    say "Fritzchen kommt ins Schlafzimmer und sieht, wie Mami stoehnend auf Papa reitet. Was macht ihr denn da?"
-	say "Mama antwortet: Ich massiere Papa gerade den Bauch weg!"
-	say "Meint Fritzchen: Das bringt doch nichts! Jeden Donnerstag kommt die Nachbarin und blaest ihn wieder auf!"
-    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-  end
- 
-  
-  listen_for /Ich will Sex von dir/i do
-    say "Aha, du willst sex mit mir?"
-    say "Also mal Ehrlich , mit deinem 5 milimeter Sportbrunser kommste bei mir nicht an."
-    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
-  end
-
-  
   listen_for /Theo/i do
     say "Theo?"
     say "Ist das nicht der nette Server  Administrator der sich um alles Kuemmert?"
