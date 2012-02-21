@@ -118,9 +118,15 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
 
-  listen_for /Bloede Kuh/i do
+  listen_for /Dumme Kuh/i do
     say "Aha , gut zu wissen?"
     say "In Zukunft kannst du dir deine Bloeden fragen da hin stecken wo keine Sonne hin scheint?"
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
+  
+  listen_for /Ich will Sex von dir/i do
+    say "Aha, du willst sex mit mir?"
+    say "Also mal Ehrlich , mit deinem 5 milimeter Sportbrunser kommste bei mir nicht an."
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
 end
