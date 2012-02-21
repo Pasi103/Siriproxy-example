@@ -129,4 +129,19 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     say "Also mal Ehrlich , mit deinem 5 milimeter Sportbrunser kommste bei mir nicht an."
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
+  
+  listen_for /Erzähle mir einen Witz/i do
+    say "Ich versuche mein Bestes aber ich bin nicht gerade gut darin. "
+    say "Fritzchen kommt ins Schlafzimmer und sieht, wie Mami stoehnend auf Papa reitet. Was macht ihr denn da?"
+	say "Mama antwortet: Ich massiere Papa gerade den Bauch weg!"
+	say "Meint Fritzchen: Das bringt doch nichts! Jeden Donnerstag kommt die Nachbarin und blaest ihn wieder auf!"
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
+  
+  listen_for /Bist du eine Frau oder ein Mann?/i do
+    say "Ich hasse diese frage"
+    say "Hast du schon einen Mann gehoert der eine Frauen Stimme hat?"
+	say "Du vollidiot , solche fragen kannste stecken lassen"
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
 end
