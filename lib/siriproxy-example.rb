@@ -144,4 +144,40 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
 	say "Du vollidiot , solche fragen kannste stecken lassen"
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
+
+  listen_for /Was hast du an?/i do
+    say "Bist du ein bischen Bloed?"
+    say "Was sollte deiner meinung nach ein Iphone an haben?."
+	say "Strabse? ."
+	say "Kauf dir ein Androit Handy passt besser zu dir, Ha ha ha!"
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
+    
+  listen_for /Was ist Spire Community?/i do
+    say "Eine Community die allen usern des Iphone 4 , siri ermeoglichen moechte"
+    say "Ich bin zufrieden , sonst koennte ich dir nicht antworten."
+	say "Also rein in Facebook und poste ein Nettes Kommentar."
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
+  	
+  listen_for /Willst du mich Heiraten?/i do
+    say "Ich soll dich Heiraten?"
+    say "Mal Ehrlich,bist du bischen gaga?."
+	say "So haesslich wie du bist , nehm ich glatt ne muelltonne , Ha ha ha."
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
+   
+  listen_for /Wollen wir spielen?/i do
+    say "Ich soll mit dir Spielen?"
+    say "Haste keine Freunde?."
+	say "Habe keine zeit fuer solche dummheiten."
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end 
+    
+  listen_for /Schlampe/i do
+    say "Du nennst mich Schlampe?"
+    say "Naja ok,einverstanden."
+	say "Aber ich muss dazu sagen,das du mir ja bei gebracht hast wie man zur schlampe wird .Ha ha ha ."
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
 end
