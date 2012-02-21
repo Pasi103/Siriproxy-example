@@ -185,4 +185,9 @@ class SiriProxy::Plugin::Example < SiriProxy::Plugin
     say "Ich habe keine Lust fuer dich in den Keller zu laufen"
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
+  
+  listen_for /Wie alt bist du /i do
+    say "Ich bin 98 und sehe aus wie 18. Ich stehe auf Frauen zwischen 16 und 74."
+    request_completed #always complete your request! Otherwise the phone will "spin" at the user!
+  end
 end
